@@ -7,17 +7,15 @@ class Tree
   attr_accessor :children, :node_name
 
   def initialize(family={}) 
-    p family
-    @children = []
     family.each do |parent, children|
       @node_name = parent
-      @children << Tree.new(children) unless children.empty?
+      @children = []
+      children.each { |parent, child| @children << Tree.new(Hash[parent, child]) } unless children == nil
     end
   end
 
   def visit_all(&block)
     visit &block
-    # p "children: #{children}"
     children.each {|c| c.visit_all &block}
   end
 
