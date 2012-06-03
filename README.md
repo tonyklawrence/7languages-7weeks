@@ -3,10 +3,10 @@
 
 Ruby
 ----
-HopePage:	http://www.ruby-lang.org
-API:		http://www.ruby-doc.org/core-1.9.3/index.html
+* HomePage:	http://www.ruby-lang.org
+* API:		http://www.ruby-doc.org/core-1.9.3/index.html
 
 Io
 --
-HomePage:	http://iolanguage.com
-Examples:	http://www.iolanguage.com/about/samplecode/
+* HomePage:	http://iolanguage.com
+* Examples:	http://www.iolanguage.com/about/samplecode/
