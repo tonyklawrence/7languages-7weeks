@@ -48,6 +48,10 @@ module ActsAsCsv
     def initialize(row)
       @row = row
     end
+    
+    def method_missing name, *args
+      return "fred"
+    end
   end
 end
 
