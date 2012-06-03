@@ -6,6 +6,8 @@
 # lions, tigers
 
 module ActsAsCsv
+  include Enumerable
+  
   def self.included(base)
     base.extend ClassMethods
   end
@@ -32,11 +34,25 @@ module ActsAsCsv
     def initialize
       read
     end 
+    
+    
+    def each &block
+      csv_contents.each do |row| 
+        cr = CsvRow.new(row)
+        block.call(cr)
+      end
+    end
+  end
+  
+  class CsvRow
+    def initialize(row)
+      @row = row
+    end
   end
 end
 
 class RubyCsv # no inheritance! You can mix it in include ActsAsCsv
-  include ActsAsCsv
+  include ActsAsCsv  
   acts_as_csv
 end
 
