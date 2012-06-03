@@ -38,19 +38,22 @@ module ActsAsCsv
     
     def each &block
       csv_contents.each do |row| 
-        cr = CsvRow.new(row)
+        cr = CsvRow.new(headers, row)
         block.call(cr)
       end
     end
   end
   
   class CsvRow
-    def initialize(row)
-      @row = row
+    def initialize(headers, contents)
+      @headers = headers
+      @contents = contents
     end
     
     def method_missing name, *args
-      return "fred"
+      index = @headers.index(name.to_s)
+      return @contents[index] unless index == nil
+      super.method_missing(name, args)
     end
   end
 end
