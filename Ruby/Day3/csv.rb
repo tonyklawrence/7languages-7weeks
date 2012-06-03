@@ -6,8 +6,6 @@
 # lions, tigers
 
 module ActsAsCsv
-  include Enumerable
-  
   def self.included(base)
     base.extend ClassMethods
   end
@@ -37,7 +35,7 @@ module ActsAsCsv
     
     
     def each &block
-      csv_contents.each do |row| 
+      return csv_contents.each do |row| 
         cr = CsvRow.new(headers, row)
         block.call(cr)
       end
@@ -74,3 +72,4 @@ puts m.csv_contents.inspect
 
 csv = RubyCsv.new
 csv.each {|row| puts row.one}
+p csv.each
