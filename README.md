@@ -10,3 +10,8 @@ Io
 --
 * HomePage:	http://iolanguage.com
 * Examples:	http://www.iolanguage.com/about/samplecode/
+
+MarkDown
+--------
+* HomePage: http://daringfireball.net/projects/markdown
+* Syntax:	http://daringfireball.net/projects/markdown/syntax#p
