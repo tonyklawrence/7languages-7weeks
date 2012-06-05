@@ -9,6 +9,7 @@ Ruby
 Io
 --
 * HomePage:	http://iolanguage.com
+* API:		http://www.iolanguage.com/scm/io/docs/reference/index.html#/Core
 * Examples:	http://www.iolanguage.com/about/samplecode/
 
 MarkDown
