@@ -3,13 +3,12 @@
 # Write a program to find the nth Fibonacci number. fib(1) is 1, and fib(4) is 3. 
 # As a bonus, solve the problem with recursion and with loops.
 
-fib := method(
+fib := method(nth,
 	value := 1
 	prev := 0
-	nth := 8
 	
 	for(i, 1, nth-1, store := value; value = value + prev; prev := store); return value
 )
 
-fib(8) println
+fib(7) println
 
