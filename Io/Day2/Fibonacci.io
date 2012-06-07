@@ -4,8 +4,7 @@
 # As a bonus, solve the problem with recursion and with loops.
 
 fib := method(nth,
-	if (nth < 2) then(return nth)
-	return fib(nth - 1) + fib(nth - 2)
+	if (nth < 2, nth, fib(nth - 1) + fib(nth - 2))
 )
 
 fib(1) println
