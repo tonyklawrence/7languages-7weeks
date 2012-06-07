@@ -4,11 +4,10 @@
 # As a bonus, solve the problem with recursion and with loops.
 
 fib := method(nth,
-	value := 1
-	prev := 0
-	
-	for(i, 1, nth-1, store := value; value = value + prev; prev := store); return value
+	if (nth < 2) then(return nth)
+	return fib(nth - 1) + fib(nth - 2)
 )
 
-fib(7) println
-
+fib(1) println
+fib(4) println
+fib(8) println
