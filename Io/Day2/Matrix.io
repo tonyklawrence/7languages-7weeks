@@ -1,16 +1,24 @@
 # Write a prototype for a two-dimensional list. 
 # The dim(x, y) method should allocate a list of y lists that are x elements long. 
-# set(x, y, value) should set a value, and get(x, y) should return that value.
 
 Matrix := Object clone
-Matrix set := method(x, y, value, x)
-Matrix get := method(x, y, x)
+Matrix set := method(x, y, value, self list at(x) atPut(y, value))
+Matrix get := method(x, y, list at(x) at(y))
 
-Object dim := method(x, y, l := list(); l setSize(y)
+Object dim := method(x, y,
 	matrix := Matrix clone
 	matrix list := list()
-	for (i, 1, x, matrix list push(l))
+	for (i, 1, x, l := list(); l setSize(y)
+		matrix list push(l))
 	matrix
 )
 
-dim(2,2) println
+matrix := dim(2,2)
+matrix println
+
+# set(x, y, value) should set a value, and get(x, y) should return that value.
+
+matrix set(1, 1, 123)
+matrix println
+
+matrix get(1, 1) println
