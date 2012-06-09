@@ -11,8 +11,7 @@ Matrix := Object clone do (
 
 Object dim := method(x, y,
 	matrix := Matrix clone
-	for (i, 1, x, l := list(); l setSize(y)
-		matrix list push(l))
+	for (i, 1, x, matrix list push(list() setSize(y)))
 	matrix
 )
 
