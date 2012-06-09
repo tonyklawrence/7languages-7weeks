@@ -6,10 +6,11 @@ Matrix := Object clone
 Matrix set := method(x, y, value, x)
 Matrix get := method(x, y, x)
 
-Object dim := method(x, y, 
+Object dim := method(x, y, l := list(); l setSize(y)
 	matrix := Matrix clone
 	matrix list := list()
+	for (i, 1, x, matrix list push(l))
 	matrix
 )
 
-dim(1,2) println
+dim(2,2) println
