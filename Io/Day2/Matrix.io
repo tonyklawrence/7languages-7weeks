@@ -3,7 +3,7 @@
 
 Matrix := Object clone do (
 	init := method(
-    	self list := list()
+		self list := list()
 	)
 	set := method(x, y, value, self list at(x) atPut(y, value))
 	get := method(x, y, list at(x) at(y))
