@@ -1,4 +1,4 @@
-/* Make a simple knowledge base. Represent some of your favorite books and authors. */
+/* Make a simple knowledge base. Represent some of your favorite books and authors */
 author(terryPratchett, fiction).
 author(bruceTate, technical).
 author(ianRankin, crime).
@@ -15,5 +15,5 @@ book(lighterFasterJava, bruceTate).
 book(knotsAndCrosses, ianRankin).
 book(thaHandingGarden, ianRankin).
 
-/* Find all books in your knowledge base written by one author. */
+/* Find all books in your knowledge base written by one author */
 book(All, terryPratchett).
