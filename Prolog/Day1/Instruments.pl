@@ -5,7 +5,7 @@ insrument(drums).
 instrument(keyboards).
 
 musician(slash, guitar).
-musician(tremonti, guitar).
+musician(vai, guitar).
 musician(animal, drums).
 
 /* Find all musicians who play the guitar */
